@@ -295,7 +295,7 @@ class Py3oReport(models.TransientModel):
             self.env['ir.config_parameter'].get_param(
                 'py3o.conversion_command', 'libreoffice',
             ),
-            '--headless',
+            '--invisible',
             '--convert-to',
             self.ir_actions_report_xml_id.py3o_filetype,
             result_path,
