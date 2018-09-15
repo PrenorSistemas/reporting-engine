@@ -26,9 +26,10 @@ class IrActionsReportXml(models.Model):
             is_native = Formats().get_format(report.py3o_filetype).native
             if ((not is_native or not report.py3o_is_local_fusion) and
                     not report.py3o_server_id):
-                raise ValidationError(_(
-                    "Can not use not native format in local fusion. "
-                    "Please specify a Fusion Server"))
+                pass
+                #raise ValidationError(_(
+                #    "Can not use not native format in local fusion. "
+                #    "Please specify a Fusion Server"))
 
     py3o_is_local_fusion = fields.Boolean(
         "Local Fusion",
